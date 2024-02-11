@@ -1,0 +1,36 @@
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --font-primary: #000000;
+  --font-secondary: #ffffff;
+
+  --primary: #9f01ea;
+
+  --accent: #1101ea;
+}
+
+main {
+  background: #f0f0f0;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  max-width: 500px;
+  margin: auto auto;
+  padding: 5px;
+}
+
+.header {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+
+  .button {
+    margin-left: 10px;
+  }
+}

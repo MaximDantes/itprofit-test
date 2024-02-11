@@ -1,0 +1,102 @@
+.modal {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  background: #000000aa;
+  display: flex;
+  padding: 10px;
+  opacity: 0;
+  transform: scale(0);
+
+  &__card {
+    max-width: 500px;
+    overflow-wrap: break-word;
+    transform: scale(0);
+
+    @media screen and (max-width: 768px) {
+      width: fit-content;
+    }
+  }
+
+  &__message {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  &--open {
+    animation: show-modal 0.5s forwards;
+
+    @keyframes show-modal {
+      1% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .modal__card {
+      animation: show-modal__card 0.5s forwards;
+
+      @keyframes show-modal__card {
+        100% {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+
+  &--closed {
+    animation: hide-modal 0.5s forwards;
+
+    @keyframes hide-modal {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      99% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(0);
+        opacity: 0;
+      }
+    }
+
+    .modal__card {
+      animation: hide-modal__card 0.5s forwards;
+
+      @keyframes hide-modal__card {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(0);
+        }
+      }
+    }
+  }
+
+  &--error {
+    color: red;
+  }
+
+  &__registration {
+    display: none !important;
+  }
+
+  &--registration {
+    .modal__message {
+      display: none;
+    }
+
+    .modal__registration {
+      display: block !important;
+    }
+  }
+}

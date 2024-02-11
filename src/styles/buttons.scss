@@ -1,0 +1,29 @@
+.button {
+  width: fit-content;
+  padding: 15px 20px;
+  background: var(--primary);
+  color: var(--font-secondary);
+  font-weight: 500;
+  font-size: 20px;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ffffff66;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity .2s;
+  }
+
+  &:hover {
+    &:after {
+      opacity: 1;
+    }
+  }
+}

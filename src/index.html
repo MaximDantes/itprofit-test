@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8' />
+    <meta
+        name='viewport'
+        content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'
+    />
+    <meta http-equiv='X-UA-Compatible' content='ie=edge' />
+    <title>ITProfit Test</title>
+</head>
+<body>
+<main>
+    <header class='header'>
+        <button class='button button--show-modal'>Show modal</button>
+        <button class='button button--registration'>Registration</button>
+    </header>
+
+    <div class='container'>
+        <div class='card'>
+            <form class='form' method='post' action='/' novalidate>
+                <div class='input form__name '>
+                    <input type='text' class='input__field' required />
+                    <label class='input__label'>Full name</label>
+                    <p class='input__error'></p>
+                </div>
+
+                <div class='input form__email'>
+                    <input type='text' class='input__field' required />
+                    <label class='input__label'>Email</label>
+                    <p class='input__error'></p>
+                </div>
+
+                <div class='input form__phone'>
+                    <input type='text' class=' input__field' required />
+                    <label class='input__label'>Phone</label>
+                    <p class='input__error'></p>
+                </div>
+
+                <div class='input form__message'>
+                    <textarea type='text' class='input__field' required></textarea>
+                    <label class='input__label'>Message</label>
+                    <p class='input__error'></p>
+                </div>
+
+                <button class='button form__button' type='submit'>Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <section class='modal'>
+        <div class='modal__card card'>
+            <p class='modal__message'></p>
+
+
+                <form class='form modal__registration' method='post' action='/' novalidate>
+                    <div class='input registration__email'>
+                        <input type='text' class='input__field' required />
+                        <label class='input__label'>Full name</label>
+                        <p class='input__error'></p>
+                    </div>
+
+                    <div class='input registration__password'>
+                        <input type='password' class='input__field' required />
+                        <label class='input__label'>Password</label>
+                        <p class='input__error'></p>
+                    </div>
+
+                    <button class='button modal__button' type='submit'>Submit</button>
+                </form>
+        </div>
+    </section>
+</main>
+</body>
+</html>
